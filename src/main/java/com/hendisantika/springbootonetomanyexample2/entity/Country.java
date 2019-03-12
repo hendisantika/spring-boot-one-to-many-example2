@@ -1,6 +1,7 @@
 package com.hendisantika.springbootonetomanyexample2.entity;
 
 import lombok.Data;
+import lombok.Getter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -19,6 +20,7 @@ import java.util.Set;
 @Entity
 @Table(name = "country")
 @Data
+@Getter
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +38,7 @@ public class Country {
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY,
             mappedBy = "country")
-    private Set<State> statt = new HashSet<>();
+    private Set<State> state = new HashSet<>();
 
     public Country() {
 
