@@ -1,7 +1,6 @@
 package com.hendisantika.springbootonetomanyexample2.entity;
 
 import lombok.Data;
-import lombok.Getter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -20,7 +19,6 @@ import java.util.Set;
 @Entity
 @Table(name = "country")
 @Data
-@Getter
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
